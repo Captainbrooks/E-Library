@@ -103,17 +103,18 @@ router.post('/signup', async (req, res) => {
     const {email,password}=req.body;
     const user=await User.login(email,password);
     if(!user){
-      res.json({message:"No user found"});
+      res.json({message:"Either User is not registered or  Email/Password is Incorrect"});
     }
     else{
         const token=createToken(user._id);
       res.cookie("jwt",token,{httpOnly:true,maxAge:3*24*60*60*1000});
-
-      res.redirect("/home");
+      res.status(201).json({user:user._id});
+      res.redirect("/home")
      
     }
   } catch (error) {
     console.log(error);
+    res.json({message:"Either User is not registered or  Email/Password is Incorrect"});
   }
     
   

@@ -53,6 +53,7 @@ userSchema.statics.login= async function(email,password){
            }
            else{
              throw Error("Password incorrect");
+            
            }
          }
       else{
