@@ -4,16 +4,19 @@ require('dotenv').config();
 const ejs = require('ejs');
 const mongoose = require('mongoose');
 const User = require('./model/user');
+const UserMsg=require('./model/UserMessage');
 const cookieParser=require("cookie-parser");
 const authRoute=require("./routes/authRoute");
 const {requireAuth}=require("./utils/utils");
 const bodyparser = require('body-parser');
 
 
+
 // middlewares
 app.use(express.json());
 app.use(express.static("public"));
 app.use('/uploads', express.static('uploads'));
+app.use(`/edit/uploads`,express.static('uploads'));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(authRoute);
@@ -37,3 +40,26 @@ mongoose
   .catch((e) => {
     console.log(e);
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running at ${process.env.PORT}`);
+});
+
+
+
