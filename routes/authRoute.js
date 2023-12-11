@@ -109,6 +109,7 @@ router.post('/signup', async (req, res) => {
         const token=createToken(user._id);
       res.cookie("jwt",token,{httpOnly:true,maxAge:3*24*60*60*1000});
       res.status(201).json({user:user._id});
+      res.redirect("/home");
      
     }
   } catch (error) {
