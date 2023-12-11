@@ -32,7 +32,7 @@ const userSchema=new mongoose.Schema({
 userSchema.pre("save",async function(next){
     try{
         const salt= await bcrypt.genSalt();
-        this.password = await bcrypt.hash(this.password,salt);
+        this.password = await bcryptjs.hash(this.password,salt);
     }catch(e){
         console.log(e);
     }
@@ -47,7 +47,7 @@ userSchema.statics.login= async function(email,password){
        if(user){
          
    
-           const isAuth =  await bcrypt.compare(password,user.password);
+           const isAuth =  await bcryptjs.compare(password,user.password);
            if(isAuth){
              return user;
            }
