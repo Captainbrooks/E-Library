@@ -1,0 +1,132 @@
+
+
+
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+.container-demo {
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    justify-self: flex-end;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#addBookForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.d-flex {
+    background-color: none;
+}
+
+
+
+.col {
+    margin: 20px;
+    
+}
+
+input[type=search] {
+
+    width: 250px;
+    padding: 4px 10px 4px 23px;
+    border:rgb(18, 224, 121) solid 2px;
+    /* filter: brightness(100%); */
+    font-size: 16px;
+    border-radius: 25px;
+  
+    background-size: 22px 30px;
+
+    /* background-color: rgb(237, 236, 236); */
+
+    transition: 0.5s all ease-in-out;
+    /* filter: brightness(110%); */
+
+
+
+
+}
+
+:placeholder-shown {
+    background-color: rgba(255, 253, 253, 0.874);
+    /* color: rgb(19, 19, 19); */
+
+
+}
+::placeholder{
+    color: rgb(0, 0, 0);
+   
+}
+
+input[type=search]:focus,
+input[type=search]:not(:placeholder-shown) {
+    width: 250px;
+    background-color: #fff;
+    filter: brightness(500%);
+
+    color: black;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+.col .fa-pen-to-square,
+.col .fa-trash,
+.col .fa-heart,
+.col .fa-download {
+display: inline;
+padding: 10px;
+opacity: 1;
+
+}
+
+
+
+.fa-solid{
+    margin:5px;
+}
+
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    color: rgb(65, 64, 64);
+    font-size: 28px;
+}
+
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.custom-navbar {
+border-bottom: 2px solid black;
+}
+
+.nav-item.active-link {
+    border-bottom: 3px solid yellow;
+}
+

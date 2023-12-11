@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup-ELibrary</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+        
+
+        <!-- Navbar -->
+        <nav class="navbar custom-navbar fixed-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/images/E-Librarylogo.png" id="logo" alt="Logo" width="100" height="90" style="filter: brightness(30%);">
+                </a>
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-xl" style="color: black;"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" id="homeLink" aria-current="page" href="/home" style="color: red; filter: brightness(200%); font-weight: bold;">Home</a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" id="aboutLink" aria-disabled="true" href="/About" style="color: red;filter: brightness(200%); font-weight: bold;">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contactLink" aria-disabled="true" href="/Contact" style="color: red; filter: brightness(200%); font-weight: bold;">Contact Us</a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  id="contactLink" aria-disabled="true" href="/logout" style="color: red; filter: brightness(200%); font-weight: bold;">Logout</a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+    <!-- navbar -->
+
+
+
+   
+    <div id="top" style="padding: 20px;">
+        <h1 id="head" style="text-align: center; color: red;">Contact Us</h1>
+        <p id="para" style="text-align: center;">Got a question? We 'd love to hear from you. Send us a message and we 'll respond as soon as possible</p>
+    </div>
+
+    <div id="bigbox" style="padding: 50px 150px 0px 150px; margin-bottom: 50px;">
+        <form action="/usermessage"  id="contact-form" class="mb-3" method="post">
+            <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="fname" placeholder="Enter your first Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lname" placeholder="Enter your last Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact</label>
+                <input type="text" class="form-control" id="contact" name="Phone" placeholder="e.g. +1 (437)-(411)-(6745)" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="useremail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="3" name="msg" placeholder="Your message goes here..." required></textarea>
+            </div>
+            <div class="mb-3">
+                <input  type="submit" value="Submit" class="btn btn-primary" >
+                <p id="success-message"></p>
+            </div>
+           
+        </form>
+       
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="bg-white text-white py-4" style="border-top: 2px solid black; margin-bottom: 0; padding-bottom:0 !important; padding-top: 10px !important;">
+        <div class="container" style="align-items: normal;">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/E-Librarylogo.png" id="logo" alt="Logo" width="200" height="200">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: black;">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/home" style="color: black; text-decoration: none;">Home</a></li>
+                        <li><a href="/About" style="color: black; text-decoration: none;">About Us</a></li>
+                        <li><a href="/Contact" style="color: black; text-decoration: none;">Contact</a></li>
+                        <li><a href="/logout" style="color: black; text-decoration: none;">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 style="color: black;">Follow Us</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="www.face"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>

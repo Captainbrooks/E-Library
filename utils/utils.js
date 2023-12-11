@@ -19,14 +19,6 @@ const requireAuth = (req,res,next)=>{
           }
           else{
                console.log(decodedToken);
-
-               //for role based authentication
-//                if(decodedToken.id===1){
-// next()
-//                }
-//                else{
-
-//                }
                next();
           }
       })
@@ -41,3 +33,5 @@ const requireAuth = (req,res,next)=>{
 
 
 module.exports={createToken,requireAuth};
+
+
