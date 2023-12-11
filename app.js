@@ -24,6 +24,24 @@ app.use(authRoute);
 app.use(bodyparser.json());
 
 
+app.use('/public', express.static('public', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js')) {
+      res.setHeader('Content-Type', 'text/javascript');
+    }
+  }
+}));
+
+
+app.use('/public', express.static('public', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css');
+    }
+  }
+}));
+
+
 // Setting the view engine
 app.set('view engine', 'ejs');
 
